@@ -1,0 +1,7 @@
+services:
+  qt-app:
+    build: .
+    volumes:
+      - ./src:/app/src
+    network_mode: "host"
+    command: /bin/bash -c "/app/entrypoint.sh"
